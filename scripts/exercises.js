@@ -37,25 +37,65 @@ function isVowel(char) {
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
-
-
+function rovarspraket(text) {
+  var string = text.toLowerCase();
+  var vowels = ["a", "e", "i", "o", "u", " "];
+  var y = "";
+  for (var i = 0; i < string.length; i++) {
+    var current = string.charAt(i);
+    if (vowels.indexOf(current) != -1) {
+      y = (y + (current + "o" + current));
+    }
+  }
+  return y;
+}
+  
 
   // ---------------------
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
   // ---------------------
-
+  function sum(numbers) {
+    var total = 0;
+    for (var i = 0; i < numbers.length; i++) {
+        total += numbers[i];
+    }
+    return total;
+  }
+  function multiply(numbers) {
+    var total = 1;
+    for (var i = 0; i <numbers.length; i++) {
+        total = (total * numbers[i]);
+    }
+    return total;
+  }
 
 
   // ---------------------
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
   // ---------------------
-
+function reverse(str) {
+  var text = "";
+  for (var i = str.length - 1; i >= 0; i--) {
+    text += str[i];
+  }
+  return text;
+}
 
 
   // ---------------------
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
+function findLongestWord(str) {
+  let words = str.split(' ');
+  let maxLength = 0;
 
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > maxLength) {
+      maxLength = words[i].length;
+    }
+  }
+  return maxLength;
+}
 
 
   // ---------------------

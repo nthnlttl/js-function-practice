@@ -32,7 +32,7 @@ function doSomethingCool() {
 }
 
 // Put your answer below -------------------------
-
+const doSomethingCool =  
 
 // -----------------------------------------------
 
@@ -52,7 +52,9 @@ function sayHi() {
 setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
-
+setTimeout(function() {
+  alert("Hello, World!");
+}, 2000);
 
 // -----------------------------------------------
 
@@ -82,7 +84,7 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
-
+c
 
 // -----------------------------------------------
 
@@ -104,7 +106,9 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
-
+const reverseStr = function(str) {
+  return str.split('').reverse.().join('');
+}
 
 
 // -----------------------------------------------
@@ -139,9 +143,17 @@ var spanishColor = function(colorName) {
 };
 
 // Put your answer below -------------------------
+const colors = {
+  rojo: "#ff0000",
+  blanco: "#ffffff",
+  azul: "#0000ff",
+  verde: "#00ff00",
+  negro: "#000000",
+}
 
-
-
+const spanishColor = function(colorName) {
+  return colors[colorName];
+}
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -157,7 +169,8 @@ var spanishColor = function(colorName) {
 var foo = "bar";
 
 // Put your answer below -------------------------
-
+let foo;
+foo = "bar";
 
 // -----------------------------------------------
 
@@ -181,7 +194,10 @@ var callTenTimes = function(callback) {
 // callTenTime(functionName);
 
 // Put your answer below -------------------------
-
+const callNTimes = function(callback, i){
+  const range = Array.from(Array(i).keys());
+  range.forEach(callback);
+}
 
 // -----------------------------------------------
 
@@ -209,7 +225,17 @@ var decreaseScore = function() {
 };
 
 // Put your answer below -------------------------
+(function() {
+  var score = 0;
 
+var increaseScore = function() {
+  score++;
+};
+
+var decreaseScore = function() {
+  score--;
+};
+})();
 
 
 // -----------------------------------------------
@@ -257,8 +283,7 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
-
-
+//amount is not defined
 
 // -----------------------------------------------
 
