@@ -57,19 +57,20 @@ function isVowel(char) {
   // ---------------------
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
   // ---------------------
-  function sum(numbers) {
-    var total = 0;
-    for (var i = 0; i < numbers.length; i++) {
-        total += numbers[i];
+  function sum(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
     }
-    return total;
+    return sum;
   }
-  function multiply(numbers) {
-    var total = 1;
-    for (var i = 0; i <numbers.length; i++) {
-        total = (total * numbers[i]);
+
+  function multiply(arr) {
+    let product = 1;
+    for (let i = 0; i < arr.length; i++) {
+      product *= arr[i];
     }
-    return total;
+    return product;
   }
 
 
@@ -90,48 +91,45 @@ function reverse(str) {
   // ---------------------
 
   
-  function findLongestWord(str) {
-  let words = str.split(',');
-  let maxLength = 0;
-
-  for (let i = 0; i < words.length; i++) {
-    if (words[i].length > maxLength) {
-      maxLength = words[i].length;
+  function findLongestWord(arr) {
+    let longestWord = "";
+    for (let i = 0; i < arr.length; i++) {
+      if (longestWord.length < arr[i].length) {
+        longestWord = arr[i];
+      }
     }
+    return longestWord.length;
   }
-  return maxLength;
-}
 
 
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
   // ---------------------
-  var filterLongWords = function(array, int){
-    var length = array.length;
-    var longestWords = [];
-    for (i = 0; i < length; i++) {
-      if (array[i].length > int) {
-        longestWords[longestWords.length] = array[i];
+  function filterLongWords(arr, lenInt) {
+    const filteredWords = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].length > lenInt) {
+        filteredWords.push(arr[i]);
       }
     }
-    return longestWords;
+    return filteredWords;
   }
 
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
-function charFreq(str) {
-  var freq = {};
-  for (var i=0; i<string.length;i++) {
-    var character = string.charAt(i);
-    if (freq[character]) {
-      freq[character]++;
-    } else {
-      freq[character] = 1;
+  function charFreq(str) {
+    const freqObj = {};
+    for (let i = 0; i < str.length; i++) {
+      if (freqObj[str[i]]) {
+        freqObj[str[i]] += 1;
+
+      } else {
+        freqObj[str[i]] = 1;
+      }
     }
+    return freqObj;
   }
-    return freq;
-}
 
   ////////////////////////////////////////////////////////////////////////
   /////////////////////////DO NOT CHANGE CODE BELOW///////////////////////
