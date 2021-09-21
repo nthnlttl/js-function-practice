@@ -37,18 +37,21 @@ function isVowel(char) {
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
-function rovarspraket(text) {
-  var string = text.toLowerCase();
-  var vowels = ["a", "e", "i", "o", "u", " "];
-  var y = "";
-  for (var i = 0; i < string.length; i++) {
-    var current = string.charAt(i);
-    if (vowels.indexOf(current) != -1) {
-      y = (y + (current + "o" + current));
+  function rovarspraket(str) {
+    let newWord =[];
+    let vowels = ['a', 'e', 'i', 'o', 'u', ' '];
+
+    let text = str.toLowerCase().split("");
+    for(let i = 0; i < text.length; i++) {
+        if (vowels.includes(text[i])) {
+            newWord.push(text[i]);
+        } else {
+
+            newWord.push(text[i], "o", text[i])
+        }
     }
+    return newWord.join("");
   }
-  return y;
-}
   
 
   // ---------------------
@@ -85,8 +88,10 @@ function reverse(str) {
   // ---------------------
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
-function findLongestWord(str) {
-  let words = str.split(' ');
+
+  
+  function findLongestWord(str) {
+  let words = str.split(',');
   let maxLength = 0;
 
   for (let i = 0; i < words.length; i++) {
@@ -101,13 +106,32 @@ function findLongestWord(str) {
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
   // ---------------------
-
-
+  var filterLongWords = function(array, int){
+    var length = array.length;
+    var longestWords = [];
+    for (i = 0; i < length; i++) {
+      if (array[i].length > int) {
+        longestWords[longestWords.length] = array[i];
+      }
+    }
+    return longestWords;
+  }
 
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
-
+function charFreq(str) {
+  var freq = {};
+  for (var i=0; i<string.length;i++) {
+    var character = string.charAt(i);
+    if (freq[character]) {
+      freq[character]++;
+    } else {
+      freq[character] = 1;
+    }
+  }
+    return freq;
+}
 
   ////////////////////////////////////////////////////////////////////////
   /////////////////////////DO NOT CHANGE CODE BELOW///////////////////////

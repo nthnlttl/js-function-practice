@@ -32,7 +32,7 @@ function doSomethingCool() {
 }
 
 // Put your answer below -------------------------
-const doSomethingCool =  
+const doSomethingCool = function doSomethingCool(); 
 
 // -----------------------------------------------
 
