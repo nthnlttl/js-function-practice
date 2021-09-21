@@ -32,7 +32,9 @@ function doSomethingCool() {
 }
 
 // Put your answer below -------------------------
-const doSomethingCool = function doSomethingCool(); 
+const doSomethingCool3 = function() {
+  console.log("Something Cool!");
+} 
 
 // -----------------------------------------------
 
@@ -53,8 +55,8 @@ setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
 setTimeout(function() {
-  alert("Hello, World!");
-}, 2000);
+  alert("Hello, World!"); 2000
+});
 
 // -----------------------------------------------
 
@@ -84,7 +86,8 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
-c
+// [C] because the timeout function will delay the console.log within the function
+// by 1ms and the letter is updated with a new letter and that one is logged.
 
 // -----------------------------------------------
 
@@ -107,7 +110,7 @@ var reverseStr = function(str) {
 
 // Put your answer below -------------------------
 const reverseStr = function(str) {
-  return str.split('').reverse.().join('');
+  return str.split("").reverse.().join("");
 }
 
 
@@ -143,16 +146,15 @@ var spanishColor = function(colorName) {
 };
 
 // Put your answer below -------------------------
-const colors = {
-  rojo: "#ff0000",
-  blanco: "#ffffff",
-  azul: "#0000ff",
-  verde: "#00ff00",
-  negro: "#000000",
-}
-
-const spanishColor = function(colorName) {
-  return colors[colorName];
+var spanishColor2 = function(colorName) {
+  const spanishColors = {
+    rojo: "#ff0000", 
+    blanco: "#ffffff",
+    azul: "#0000ff",
+    verde: "#00ff00",
+    negro: "#000000"
+  }
+  return spanishColors[colorName];
 }
 // -----------------------------------------------
 
@@ -257,7 +259,11 @@ var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
 
+var addNumbers2 = function(numberA, numberB) {
+  return numberA + numberB:
+};
 
+var twoPlusTwo = addNumbers2(2,2);
 
 // -----------------------------------------------
 
@@ -283,8 +289,11 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
-//amount is not defined
+// It results in NaN because a number type + undefined type = NaN
 
+var accelerate2 = function(amount = 1) {
+  speed += amount;
+};
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
